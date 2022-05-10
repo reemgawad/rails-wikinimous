@@ -1,1 +1,18 @@
+<% require 'faker' %>
+
 <h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+<p>
+  <% 5.times do %>
+  <%= Faker::Lorem.paragraph %>
+  <% end %>
+</p>
+
+<p>
+  <% 5.times do %>
+  <%= Faker::Lorem.paragraph %>
+  <% end %>
+</p>
+
+<p><%= link_to 'Back', articles_path %></p>
